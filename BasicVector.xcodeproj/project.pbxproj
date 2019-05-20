@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0D58CA2292FF63007337DF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D0D58C92292FF63007337DF /* Alamofire.framework */; };
 		2D133E5522905E8800C1CB68 /* BasicVector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D133E4B22905E8800C1CB68 /* BasicVector.framework */; };
 		2D133E5A22905E8800C1CB68 /* BasicVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D133E5922905E8800C1CB68 /* BasicVectorTests.swift */; };
 		2D133E5C22905E8800C1CB68 /* BasicVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D133E4E22905E8800C1CB68 /* BasicVector.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D0D58C92292FF63007337DF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2D133E4B22905E8800C1CB68 /* BasicVector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BasicVector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D133E4E22905E8800C1CB68 /* BasicVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicVector.h; sourceTree = "<group>"; };
 		2D133E4F22905E8800C1CB68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D0D58CA2292FF63007337DF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +55,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D0D58C82292FF63007337DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D0D58C92292FF63007337DF /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D133E4122905E8800C1CB68 = {
 			isa = PBXGroup;
 			children = (
 				2D133E4D22905E8800C1CB68 /* BasicVector */,
 				2D133E5822905E8800C1CB68 /* BasicVectorTests */,
 				2D133E4C22905E8800C1CB68 /* Products */,
+				2D0D58C82292FF63007337DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -354,6 +366,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/BasicVector/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -381,6 +397,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/BasicVector/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Alamofire
 //MARK: Types
 
 public typealias Scalar = Float
@@ -37,4 +37,20 @@ public extension Scalar {
 }
 
 
-
+public class BasicFunc {
+    
+    private var isNetworkAvailable: Bool? { return NetworkReachabilityManager()?.isReachable }
+    
+    
+    public static var shared = BasicFunc()
+    
+    private init() {}
+    
+    public func getMetricA() -> Int {
+        if isNetworkAvailable == true {
+            return 7
+        } else {
+            return 0
+        }
+    }
+}
